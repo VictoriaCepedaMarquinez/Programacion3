@@ -5,9 +5,10 @@ public class Main {
         int[] arreglo1 = {1, 2, 3, 4, 5};
         int[] arreglo2 = {5, 3, 8, 10};
 
-        System.out.println("Arreglo 1 está ordenado: " + estaOrdenado(arreglo1, 0)); // true
-        System.out.println("Arreglo 2 está ordenado: " + estaOrdenado(arreglo2, 0)); // false
-        System.out.println(busquedaBinaria(0,MAXARR,1,arreglo1));
+        //System.out.println("Arreglo 1 está ordenado: " + estaOrdenado(arreglo1, 0)); // true
+       // System.out.println("Arreglo 2 está ordenado: " + estaOrdenado(arreglo2, 0)); // false
+       // System.out.println(busquedaBinaria(0,MAXARR,1,arreglo1));
+        System.out.println(aBinario(25));
 
 
     }
@@ -52,6 +53,16 @@ public class Main {
         }
 
         return busquedaBinaria(ini, mitad - 1, num, arrResultante);
+    }
+
+    public static String aBinario(int convertir) {//TODO CHAT GTP NO HIZO NADA ACA LO PROMETO
+        if (convertir == 0) {
+            return "0";
+        }
+        if (convertir == 1) {
+            return "1";
+        }
+        return aBinario(convertir / 2) + (convertir % 2);
     }
 
 }
